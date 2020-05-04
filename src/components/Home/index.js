@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import {Group, Cell, Button} from '@vkontakte/vkui';
+import {Panel, Group, Cell, Button} from '@vkontakte/vkui';
+import './Home.css'
 
-const Home = ({id, go}) => (
-    <Panel id={id}>
-        <PanelHeader>Какой ты вагон?</PanelHeader>
-
+const Index = ({id, go}) => (
+    <Panel className="Home" id={id}>
         <Group>
+            <Cell className="Home-title">Кактой ты вагон?</Cell>
             <Cell>Тут текст описание и картинка поезда</Cell>
             <Cell>
                 <Button size="xl" level="2" data-to="test" onClick={go}>
@@ -20,9 +18,9 @@ const Home = ({id, go}) => (
     </Panel>
 );
 
-Home.propTypes = {
+Index.propTypes = {
     id: PropTypes.string.isRequired,
     go: PropTypes.func.isRequired,
 };
 
-export default Home;
+export default Index;

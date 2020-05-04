@@ -1,0 +1,7 @@
+.View__header {
+    display: none;
+}
+
+.View--header .Panel__in {
+    padding-top: 0 !important;
+}

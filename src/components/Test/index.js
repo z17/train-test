@@ -6,7 +6,7 @@ import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import {Cell, Group} from '@vkontakte/vkui';
 
-import Button from "@vkontakte/vkui/dist/components/Button/Button";
+import Answer from "../Answer/index";
 
 const questions = [
     {
@@ -32,7 +32,7 @@ const questions = [
 ];
 
 
-const Test = ({id, go}) => {
+const Index = ({id, go}) => {
 
     const [activeQuestion, setActiveQuestion] = useState(0);
 
@@ -48,23 +48,18 @@ const Test = ({id, go}) => {
 
     return (
         <Panel id={id}>
-            <PanelHeader
-                left={<PanelHeaderButton onClick={go} data-to="home"><Icon24Back/></PanelHeaderButton>}
-            >
-                Какой ты вагон? {activeQuestion + 1}/{questions.length}
-            </PanelHeader>
             <Group>
+                <Cell>Какой ты вагон? {activeQuestion + 1}/{questions.length}</Cell>
                 <Cell>
                     {question.text}
                 </Cell>
                 {question.answers.map((answer, id) => {
-                    return <Cell key={id}>
-                        <Button onClick={next}
-                                data-answer={id}
-                                data-to='result'>
-                            {id+1}. {answer}
-                        </Button>
-                    </Cell>
+                    return <Answer
+                        key={id}
+                        id={id}
+                        text={answer}
+                        onClick={next}
+                    />
                 })}
             </Group>
 
@@ -72,8 +67,8 @@ const Test = ({id, go}) => {
     )
 };
 
-Test.propTypes = {
+Index.propTypes = {
     id: PropTypes.string.isRequired,
 };
 
-export default Test;
+export default Index;
