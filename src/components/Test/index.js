@@ -1,50 +1,28 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
-import {Cell, Group} from '@vkontakte/vkui';
+import {Panel, Cell, Group} from '@vkontakte/vkui';
 
 import Answer from "../Answer/index";
-
-const questions = [
-    {
-        id: 1,
-        text: 'Что с этим делать?',
-        answers: [1, 2, 3, 4]
-    },
-    {
-        id: 2,
-        text: 'Что с этим делать?',
-        answers: [1, 2, 3, 4]
-    },
-    {
-        id: 3,
-        text: 'Что с этим делать?',
-        answers: [1, 2, 3, 4]
-    },
-    {
-        id: 4,
-        text: 'Что с этим делать?',
-        answers: [1, 2, 3, 4]
-    }
-];
+import {applyQuestionAnswer, questions} from "../../models/Test";
 
 
 const Index = ({id, go}) => {
 
     const [activeQuestion, setActiveQuestion] = useState(0);
+    const question = questions[activeQuestion];
 
     const next = (event) => {
-        if (activeQuestion + 1 === questions.length) {
-            go(event);
-        } else {
+        let answerId =  event.currentTarget.dataset.answer;
+        applyQuestionAnswer(activeQuestion, answerId);
+
+        if (activeQuestion + 1 < questions.length) {
             setActiveQuestion(activeQuestion + 1);
+        } else {
+            go('result');
         }
+
     };
 
-    const question = questions[activeQuestion];
 
     return (
         <Panel id={id}>
@@ -55,9 +33,9 @@ const Index = ({id, go}) => {
                 </Cell>
                 {question.answers.map((answer, id) => {
                     return <Answer
-                        key={id}
                         id={id}
-                        text={answer}
+                        answer={answer}
+                        key={id}
                         onClick={next}
                     />
                 })}

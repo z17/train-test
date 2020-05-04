@@ -10,8 +10,8 @@ import "./App.css"
 const App = () => {
     const [activePanel, setActivePanel] = useState('home');
 
-    const go = (e) => {
-        setActivePanel(e.currentTarget.dataset.to);
+    const go = (panel) => {
+        setActivePanel(panel);
     };
 
     return (
