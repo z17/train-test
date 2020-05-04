@@ -150,7 +150,7 @@ export const applyQuestionAnswer = (questionId, answerId) => {
 };
 
 export const getResultText = () => {
-  let bestIndex = RESULT_ONE;
+    let bestIndex = RESULT_ONE;
 
     for (const key in result) {
         if (result[key] > result[bestIndex]) {

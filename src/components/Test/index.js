@@ -8,30 +8,28 @@ import {applyQuestionAnswer, questions} from "../../models/Test";
 
 const Index = ({id, go}) => {
 
-    const [activeQuestion, setActiveQuestion] = useState(0);
-    const question = questions[activeQuestion];
+    const [activeQuestionId, setActiveQuestionId] = useState(0);
+    const activeQuestion = questions[activeQuestionId];
 
     const next = (event) => {
         let answerId =  event.currentTarget.dataset.answer;
-        applyQuestionAnswer(activeQuestion, answerId);
+        applyQuestionAnswer(activeQuestionId, answerId);
 
-        if (activeQuestion + 1 < questions.length) {
-            setActiveQuestion(activeQuestion + 1);
+        if (activeQuestionId + 1 < questions.length) {
+            setActiveQuestionId(activeQuestionId + 1);
         } else {
             go('result');
         }
-
     };
-
 
     return (
         <Panel id={id}>
             <Group>
-                <Cell>Какой ты вагон? {activeQuestion + 1}/{questions.length}</Cell>
+                <Cell>Какой ты вагон? {activeQuestionId + 1}/{questions.length}</Cell>
                 <Cell>
-                    {question.text}
+                    {activeQuestion.text}
                 </Cell>
-                {question.answers.map((answer, id) => {
+                {activeQuestion.answers.map((answer, id) => {
                     return <Answer
                         id={id}
                         answer={answer}

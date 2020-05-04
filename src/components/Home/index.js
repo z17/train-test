@@ -9,7 +9,9 @@ const Index = ({id, go}) => (
             <Cell className="Home-title">Кактой ты вагон?</Cell>
             <Cell>Тут текст описание и картинка поезда</Cell>
             <Cell>
-                <Button size="xl" level="2" onClick={() => {go('test')}}>
+                <Button size="xl" level="2" onClick={() => {
+                    go('test')
+                }}>
                     Начать тест
                 </Button>
 
