@@ -4,6 +4,7 @@ import {Panel, Cell, Group} from '@vkontakte/vkui';
 
 import Answer from "../Answer/index";
 import {applyQuestionAnswer, questions} from "../../models/Test";
+import {EVENT_ANSWER, stats} from "../../models/Stats";
 
 
 const Index = ({id, go}) => {
@@ -13,6 +14,8 @@ const Index = ({id, go}) => {
 
     const next = (event) => {
         let answerId =  event.currentTarget.dataset.answer;
+
+        stats(EVENT_ANSWER, answerId);
         applyQuestionAnswer(activeQuestionId, answerId);
 
         if (activeQuestionId + 1 < questions.length) {

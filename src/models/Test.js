@@ -1,3 +1,5 @@
+import {EVENT_RESULT, stats} from "./Stats";
+
 const RESULT_ONE = 'key_one';
 const RESULT_TWO = 'key_two';
 const RESULT_THREE = 'key_three';
@@ -157,6 +159,8 @@ export const getResultText = () => {
             bestIndex = key;
         }
     }
+
+    stats(EVENT_RESULT, bestIndex);
 
     return resultVariants[bestIndex];
 };
