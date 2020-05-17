@@ -6,13 +6,13 @@ npm-debug.log*
 
 # Dependency directories
 package-lock.json
-/node_modules
+node_modules
 
 # Optional npm cache directory
 .npm
 
 # Prod Bundle
-/build
+vkui/build
 
 .vscode
 .idea
