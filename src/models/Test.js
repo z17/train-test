@@ -128,9 +128,24 @@ export const questions = [
 ];
 
 const resultVariants = {
-    [RESULT_ONE]: "Круто! Ты -- тупой вагон",
-    [RESULT_TWO]: "Ну такое себе, ты всего лишь стрёмный вагон",
-    [RESULT_THREE]: "Ты -- бесполезный вагон",
+    [RESULT_ONE]: {
+        title: "Тупой вагон",
+        text: "Круто! Ты -- тупой вагон",
+        image: "https://sun9-46.userapi.com/JMyb1DQ01jLIugxRasCxk22k_XbRDgXPfRAMiA/LSZEn2_o55E.jpg",
+        attachment: "photo19273718_457242794"
+    },
+    [RESULT_TWO]: {
+        title: "Стрёмный вагон",
+        text: "Ну такое себе, ты всего лишь стрёмный вагон",
+        image: "https://sun9-46.userapi.com/JMyb1DQ01jLIugxRasCxk22k_XbRDgXPfRAMiA/LSZEn2_o55E.jpg",
+        attachment: "photo19273718_457242794"
+    },
+    [RESULT_THREE]: {
+        title: "Бесполезный вагон",
+        text: "Ты -- бесполезный вагон",
+        image: "https://sun9-46.userapi.com/JMyb1DQ01jLIugxRasCxk22k_XbRDgXPfRAMiA/LSZEn2_o55E.jpg",
+        attachment: "photo19273718_457242794"
+    },
 };
 
 const result = {
@@ -151,7 +166,7 @@ export const applyQuestionAnswer = (questionId, answerId) => {
     }
 };
 
-export const getResultText = () => {
+export const getResult = () => {
     let bestIndex = RESULT_ONE;
 
     for (const key in result) {
