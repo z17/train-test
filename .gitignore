@@ -16,3 +16,5 @@ vkui/build
 
 .vscode
 .idea
+
+server/www/TrainTest/Config.php

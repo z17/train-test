@@ -15,7 +15,7 @@ const Index = ({id, go}) => {
     const next = (event) => {
         let answerId =  event.currentTarget.dataset.answer;
 
-        stats(EVENT_ANSWER, answerId);
+        stats(EVENT_ANSWER, activeQuestionId, answerId);
         applyQuestionAnswer(activeQuestionId, answerId);
 
         if (activeQuestionId + 1 < questions.length) {
