@@ -1,12 +1,6 @@
 <?php
 spl_autoload_register(function ($name) {
     $fileParts = explode('\\', $name);
-    array_walk($fileParts, function (&$str, $i, $size) {
-        if ($i == $size - 1) {
-            return;
-        }
-        $str = strtolower($str);
-    }, count($fileParts));
     $filePath = implode('/', $fileParts) . '.php';
     /** @noinspection PhpIncludeInspection */
     require_once $filePath;
@@ -14,7 +8,7 @@ spl_autoload_register(function ($name) {
 
 use TrainTest\Stats;
 
-$path = isset($_SERVER["REDIRECT_URL"]) ? $_SERVER["REDIRECT_URL"] : '';
+$path = isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : '';
 
 switch ($path) {
     case Stats::URL:
@@ -27,5 +21,8 @@ switch ($path) {
         $action->log($type, $key1, $key2);
         break;
     default:
+        header("HTTP/1.0 404 Not Found");
+        echo 404;
+        exit;
         break;
 }
