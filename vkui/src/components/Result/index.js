@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Panel, Button, Cell, Group} from '@vkontakte/vkui';
+import {Panel, Button, Cell, Div, Group} from '@vkontakte/vkui';
 import {getResult} from "../../models/Test";
 import {EVENT_RETRY, stats} from "../../models/Stats";
 import bridge from '@vkontakte/vk-bridge';
@@ -34,7 +34,7 @@ const Index = ({id, go}) => {
             <Group>
                 <Cell>Результат: {result.title}</Cell>
                 <Cell><img className="Result-Image" src={result.image} onClick={onImageClick}/></Cell>
-                <Cell>{result.text}</Cell>
+                <Div>{result.text}</Div>
                 <Cell>
                     <Button size="xl" level="2" onClick={onRetryClick}>
                         В начало
