@@ -15,7 +15,8 @@ const Index = ({id, go}) => {
     };
 
     const onPostShareClick = () => {
-        bridge.send("VKWebAppShowWallPostBox", {"message": result.text, "attachments": result.attachment});
+        let text = result.text + "\nУзнать какой вы вагон: https://vk.com/app7469782";
+        bridge.send("VKWebAppShowWallPostBox", {"message": text, "attachments": result.attachment});
     };
 
     const onStoryShareClick = () => {

@@ -8,13 +8,14 @@
     "dev": "cross-env PORT=10888 HTTPS=false react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "vk-miniapps-deploy"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "gh-pages": "^3.0.0",
     "react-hot-loader": "^4.9.0",
     "react-scripts": "^3.4.1"
   },
@@ -44,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://z17.github.io/train-test/"
 }

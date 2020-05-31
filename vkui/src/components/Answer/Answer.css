@@ -1,0 +1,8 @@
+.Answer {
+    border-bottom:1px solid #e1e1e1;
+    cursor: pointer;
+}
+
+.Answer:last-child {
+    border-bottom:none;
+}

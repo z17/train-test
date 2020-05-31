@@ -1,14 +1,12 @@
 import React from 'react';
-import {Cell, Button} from '@vkontakte/vkui';
+import {Cell} from '@vkontakte/vkui';
+import './Answer.css'
 
 const Answer = ({id, answer, onClick}) => {
 
     return (
-        <Cell>
-            <Button onClick={onClick}
-                    data-answer={id}>
-                {id + 1}. {answer.text}
-            </Button>
+        <Cell className="Answer" onClick={onClick} data-answer={id}>
+            {id + 1}. {answer.text}
         </Cell>
     )
 };
