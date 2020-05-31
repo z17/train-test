@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import {Panel, Cell, Group} from '@vkontakte/vkui';
 
 import Answer from "../Answer/index";
-import {applyQuestionAnswer, questions} from "../../models/Test";
+import {applyQuestionAnswer} from "../../models/Test";
 import {EVENT_ANSWER, stats} from "../../models/Stats";
+import {questions} from "../../models/TestData";
 
 
 const Index = ({id, go}) => {
