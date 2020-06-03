@@ -20,7 +20,15 @@ const Index = ({id, go}) => {
     };
 
     const onStoryShareClick = () => {
-
+        bridge.send("VKWebAppShowStoryBox", {
+            "background_type": "image",
+            "url": result.image,
+            "attachment": {
+                "text": "open",
+                "type": "url",
+                "url": "https://vk.com/app7469782"
+            }
+        });
     };
 
     const onImageClick = () => {
@@ -48,7 +56,7 @@ const Index = ({id, go}) => {
                 </Button>
             </Cell>
             <Cell>
-                <Button size="xl" level="2" onClick={onStoryShareClick()}>
+                <Button size="xl" level="2" onClick={onStoryShareClick}>
                     В истории
                 </Button>
             </Cell>
