@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Panel, Button, Cell, Div, Group} from '@vkontakte/vkui';
+import {Panel, Button, Cell, Div, Group, PanelHeader} from '@vkontakte/vkui';
 import {getResult} from "../../models/Test";
 import {EVENT_RETRY, stats} from "../../models/Stats";
 import bridge from '@vkontakte/vk-bridge';
@@ -31,29 +31,29 @@ const Index = ({id, go}) => {
         });
     };
 
-    return (<Panel id={id}>
-            <Group>
-                <Cell>Результат: {result.title}</Cell>
-                <Cell><img className="Result-Image" src={result.image} onClick={onImageClick}/></Cell>
-                <Div>{result.text}</Div>
-                <Cell>
-                    <Button size="xl" level="2" onClick={onRetryClick}>
-                        В начало
-                    </Button>
-                </Cell>
-                <Cell>
-                    <Button size="xl" level="2" onClick={onPostShareClick}>
-                        На стену
-                    </Button>
-                </Cell>
-                <Cell>
-                    <Button size="xl" level="2" onClick={onStoryShareClick()}>
-                        В истории
-                    </Button>
-                </Cell>
-            </Group>
-        </Panel>
-    )
+    return <Panel id={id}>
+        <PanelHeader>Результат</PanelHeader>
+        <Group>
+            <Cell className="Result-Title">{result.title}</Cell>
+            <Cell><img className="Result-Image" src={result.image} onClick={onImageClick}/></Cell>
+            <Div>{result.text}</Div>
+            <Cell>
+                <Button size="xl" level="2" onClick={onRetryClick}>
+                    В начало
+                </Button>
+            </Cell>
+            <Cell>
+                <Button size="xl" level="2" onClick={onPostShareClick}>
+                    На стену
+                </Button>
+            </Cell>
+            <Cell>
+                <Button size="xl" level="2" onClick={onStoryShareClick()}>
+                    В истории
+                </Button>
+            </Cell>
+        </Group>
+    </Panel>
 };
 
 Index.propTypes = {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Cell, Div, Group, Panel, Progress} from '@vkontakte/vkui';
+import {Cell, Div, Group, Panel, Progress, PanelHeader} from '@vkontakte/vkui';
 
 import Answer from "../Answer/index";
 import {applyQuestionAnswer} from "../../models/Test";
@@ -28,9 +28,9 @@ const Index = ({id, go}) => {
 
     return (
         <Panel id={id}>
+            <PanelHeader>Какой ты вагон? {currentState}</PanelHeader>
             <Group>
                 <Progress value={activeQuestionId * 10}/>
-                <Cell>Какой ты вагон? {currentState}</Cell>
                 <Cell>
                     {activeQuestion.text}
                 </Cell>
