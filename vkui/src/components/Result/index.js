@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Panel, Button, Cell, Div, Group, PanelHeader} from '@vkontakte/vkui';
+import {Panel, Button, Cell, Div, Group, PanelHeader, Separator} from '@vkontakte/vkui';
 import {getResult} from "../../models/Test";
 import {EVENT_RETRY, stats} from "../../models/Stats";
 import bridge from '@vkontakte/vk-bridge';
 import './Result.css'
+import Icon24StoryOutline from '@vkontakte/icons/dist/24/story_outline';
+import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 
 const Index = ({id, go}) => {
     const [result] = useState(getResult());
@@ -38,7 +40,6 @@ const Index = ({id, go}) => {
             ]
         });
     };
-
     return <Panel id={id}>
         <PanelHeader>Результат</PanelHeader>
         <Group>
@@ -46,18 +47,17 @@ const Index = ({id, go}) => {
             <Cell><img className="Result-Image" src={result.image} onClick={onImageClick}/></Cell>
             <Div>{result.text}</Div>
             <Cell>
-                <Button size="xl" level="2" onClick={onRetryClick}>
-                    В начало
-                </Button>
-            </Cell>
-            <Cell>
-                <Button size="xl" level="2" onClick={onPostShareClick}>
+                <Button className="Result-Share" before={<Icon24ShareOutline/>} onClick={onPostShareClick}>
                     На стену
                 </Button>
-            </Cell>
-            <Cell>
-                <Button size="xl" level="2" onClick={onStoryShareClick}>
+                <Button className="Result-Share" before={<Icon24StoryOutline/>} onClick={onStoryShareClick}>
                     В истории
+                </Button>
+            </Cell>
+            <Separator/>
+            <Cell>
+                <Button size="xl" mode="outline" onClick={onRetryClick}>
+                    Перейти в начало
                 </Button>
             </Cell>
         </Group>

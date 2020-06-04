@@ -1,6 +1,11 @@
 .Result-Image {
-    width:100%;
+    width: 100%;
 }
+
 .Result-Title {
     font-weight: bold;
+}
+
+.Result-Share {
+    margin-right: 16px;
 }
