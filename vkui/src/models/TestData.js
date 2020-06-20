@@ -11,7 +11,7 @@ export const RESULT_9 = '9';
 export const questions = [
     {
         id: 1,
-        text: 'Мое будущее кажется мне благоприятным и позитивным',
+        text: 'Моё будущее кажется мне благоприятным и позитивным',
         answers: [
             {
                 text: "Да",
@@ -76,7 +76,7 @@ export const questions = [
                 }
             },
             {
-                text: "чувство собственной важности",
+                text: "Чувство собственной важности",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -90,7 +90,7 @@ export const questions = [
                 }
             },
             {
-                text: "лес и природа",
+                text: "Лес и природа",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -104,7 +104,7 @@ export const questions = [
                 }
             },
             {
-                text: "приключения",
+                text: "Приключения",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -124,7 +124,7 @@ export const questions = [
         text: 'Как ты относишься к людям?',
         answers: [
             {
-                text: "с осторожностью",
+                text: "С осторожностью",
                 result: {
                     [RESULT_1]: -1,
                     [RESULT_2]: 1,
@@ -138,7 +138,7 @@ export const questions = [
                 }
             },
             {
-                text: "с интересом",
+                text: "С интересом",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -152,7 +152,7 @@ export const questions = [
                 }
             },
             {
-                text: "равнодушно",
+                text: "Равнодушно",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -166,7 +166,7 @@ export const questions = [
                 }
             },
             {
-                text: "никак",
+                text: "Никак",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -185,7 +185,7 @@ export const questions = [
         text: 'Для встречи с друзьями ты выберешь место',
         answers: [
             {
-                text: "где громкая музыки можно танцевать.",
+                text: "Где громкая музыки можно танцевать",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -199,7 +199,7 @@ export const questions = [
                 }
             },
             {
-                text: "где спокойная музыка и уютно",
+                text: "Где спокойная музыка и уютно",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -213,7 +213,7 @@ export const questions = [
                 }
             },
             {
-                text: "где можно спеть караоке.",
+                text: "Где можно спеть караоке",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: -1,
@@ -227,7 +227,7 @@ export const questions = [
                 }
             },
             {
-                text: "где можно вкусно поесть",
+                text: "Где можно вкусно поесть",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -246,7 +246,7 @@ export const questions = [
         text: 'Другие часто завидуют',
         answers: [
             {
-                text: " вашей способности ответить на реплику остроумно.",
+                text: "Вашей способности ответить на реплику остроумно",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -260,7 +260,7 @@ export const questions = [
                 }
             },
             {
-                text: " вашему терпению.",
+                text: "Вашему терпению",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -274,7 +274,7 @@ export const questions = [
                 }
             },
             {
-                text: " вашей целеустремленности.",
+                text: "Вашей целеустремленности",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -288,7 +288,7 @@ export const questions = [
                 }
             },
             {
-                text: " вашему умению выпутываться из трудных ситуаций.",
+                text: "Вашему умению выпутываться из трудных ситуаций",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -304,11 +304,11 @@ export const questions = [
     },
     {
         id: 6,
-        text: 'В свободное время Вы обычно:',
+        text: 'В свободное время ты обычно:',
         answers: [
 
             {
-                text: "проводите время с друзьями",
+                text: "Проводишь время с друзьями",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -322,7 +322,7 @@ export const questions = [
                 }
             },
             {
-                text: "смотрите телевизор",
+                text: "Смотришь телевизор",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -336,7 +336,7 @@ export const questions = [
                 }
             },
             {
-                text: "читаете художественную литературу",
+                text: "Читаешь художественную литературу",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -350,7 +350,7 @@ export const questions = [
                 }
             },
             {
-                text: "готовите еду",
+                text: "Готовишь еду",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -364,7 +364,7 @@ export const questions = [
                 }
             },
             {
-                text: "занимаетесь спортом",
+                text: "Занимаетешься спортом",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -380,11 +380,11 @@ export const questions = [
     },
     {
         id: 7,
-        text: 'Какая работа Вам нравится?',
+        text: 'Какая работа тебе нравится?',
         answers: [
 
             {
-                text: "содержащая элементы неожиданности и риска",
+                text: "Содержащая элементы неожиданности и риска",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -398,7 +398,7 @@ export const questions = [
                 }
             },
             {
-                text: "такая, где можно использовать свои опыт и знания",
+                text: "Такая, где можно использовать свои опыт и знания",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -412,7 +412,7 @@ export const questions = [
                 }
             },
             {
-                text: "нетрудная",
+                text: "Нетрудная",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -428,11 +428,11 @@ export const questions = [
     },
     {
         id: 8,
-        text: 'Ваше обычное настроение?',
+        text: 'Твоё обычное настроение?',
         answers: [
 
             {
-                text: "преобладает оптимистическое",
+                text: "Преобладает оптимистическое",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -446,7 +446,7 @@ export const questions = [
                 }
             },
             {
-                text: "часто оптимистическое",
+                text: "Часто оптимистическое",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 1,
@@ -460,7 +460,7 @@ export const questions = [
                 }
             },
             {
-                text: "часто пессимистическое",
+                text: "Часто пессимистическое",
                 result: {
                     [RESULT_1]: 0,
                     [RESULT_2]: 0,
@@ -474,7 +474,7 @@ export const questions = [
                 }
             },
             {
-                text: "преобладает пессимистическое",
+                text: "Преобладает пессимистическое",
                 result: {
                     [RESULT_1]: 1,
                     [RESULT_2]: 0,
@@ -490,7 +490,7 @@ export const questions = [
     },
     {
         id: 9,
-        text: 'Вы гуляете по городу и видите, как по крыше гаражей бегают дети. Что думаете?',
+        text: 'Ты гуляешь по городу и видишь, как по крыше гаражей бегают дети. Что думаешь?',
         answers: [
 
 
@@ -553,7 +553,7 @@ export const questions = [
     },
     {
         id: 10,
-        text: 'Вы выиграли в лотерею миллион рублей. Что будете делать?',
+        text: 'Ты выиграл в лотерею миллион рублей. Что будешь делать?',
         answers: [
 
             {

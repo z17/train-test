@@ -17,7 +17,7 @@ const Index = ({id, go}) => {
     };
 
     const onPostShareClick = () => {
-        let text = result.text + "\nУзнать какой вы вагон: https://vk.com/app7469782";
+        let text = result.text + "\nУзнать какой ты вагон: https://vk.com/app7469782";
         bridge.send("VKWebAppShowWallPostBox", {"message": text, "attachments": result.attachment});
     };
 
