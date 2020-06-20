@@ -8,6 +8,8 @@ spl_autoload_register(function ($name) {
 
 use TrainTest\Stats;
 
+header('Access-Control-Allow-Origin: *');
+
 $path = isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : '';
 
 switch ($path) {
