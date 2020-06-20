@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {Cell, Div, Group, Panel, Progress, PanelHeader} from '@vkontakte/vkui';
+import {Div, Group, Panel, Progress, PanelHeader} from '@vkontakte/vkui';
 
 import Answer from "../Answer/index";
 import {applyQuestionAnswer} from "../../models/Test";
 import {EVENT_ANSWER, stats} from "../../models/Stats";
 import {questions} from "../../models/TestData";
+import './Test.css';
 
 const Index = ({id, go}) => {
 
@@ -31,9 +32,9 @@ const Index = ({id, go}) => {
             <PanelHeader>Какой ты вагон? {currentState}</PanelHeader>
             <Group>
                 <Progress value={activeQuestionId * 10}/>
-                <Cell>
+                <Div className="Question">
                     {activeQuestion.text}
-                </Cell>
+                </Div>
                 <Div className="Answers">
                     {activeQuestion.answers.map((answer, id) => {
                         return <Answer

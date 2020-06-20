@@ -1,6 +1,7 @@
 .Answer {
     border-bottom:1px solid #e1e1e1;
     cursor: pointer;
+    line-height: 20px;
 }
 
 .Answer:last-child {

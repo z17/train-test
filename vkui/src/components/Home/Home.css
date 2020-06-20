@@ -6,3 +6,7 @@
 .Home-Image {
     width: 100%;
 }
+
+.Home-Text {
+    line-height: 20px;
+}
