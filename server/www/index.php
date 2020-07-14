@@ -16,9 +16,9 @@ switch ($path) {
     case Stats::URL:
         $post_data = file_get_contents('php://input');
         $data = json_decode($post_data, true);
-        $type = $data['type'] ? (string)$data['type'] : '';
-        $key1 = $data['key1'] ? (string)$data['key1'] : '';
-        $key2 = $data['key2'] ? (string)$data['key2'] : '';
+        $type = isset($data['type']) ? (string)$data['type'] : '';
+        $key1 = isset($data['key1']) ? (string)$data['key1'] : '';
+        $key2 = isset($data['key2']) ? (string)$data['key2'] : '';
         $action = new Stats();
         $action->log($type, $key1, $key2);
         break;
