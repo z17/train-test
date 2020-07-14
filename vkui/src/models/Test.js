@@ -1,7 +1,11 @@
 import {EVENT_RESULT, stats} from "./Stats";
 import {questions, RESULT_1, resultVariants} from "./TestData";
 
-const result = {};
+let result = {};
+
+export const startTest = () => {
+    result = {};
+};
 
 export const applyQuestionAnswer = (questionId, answerId) => {
     const result_diff = questions[questionId].answers[answerId].result;

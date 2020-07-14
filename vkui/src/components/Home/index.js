@@ -4,12 +4,14 @@ import {Panel, Group, Cell, Div, Button, PanelHeader} from '@vkontakte/vkui';
 import './Home.css'
 import {EVENT_START, stats} from "../../models/Stats";
 import mainImage from '../../img/main.jpg'
+import {startTest} from "../../models/Test";
 
 
 const Index = ({id, go}) => {
 
     const onStartClick = () => {
         stats(EVENT_START);
+        startTest();
         go('test')
     };
 
