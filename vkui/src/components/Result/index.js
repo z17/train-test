@@ -29,7 +29,35 @@ const Index = ({id, go}) => {
                 "text": "open",
                 "type": "url",
                 "url": "https://vk.com/app7469782"
-            }
+            },
+            "stickers": [
+                {
+                    "sticker_type": "native",
+                    "sticker": {
+                        "action_type": "text",
+                        "transform": {
+                            "gravity": "center_top",
+                            "translation_y": 0.12
+                        },
+                        "action": {
+                            "text": "Какой ты вагон?"
+                        }
+                    }
+                },
+                {
+                    "sticker_type": "native",
+                    "sticker": {
+                        "action_type": "text",
+                        "transform": {
+                            "gravity": "center_bottom",
+                            "translation_y": -0.12
+                        },
+                        "action": {
+                            "text": result.title
+                        }
+                    }
+                }
+            ]
         });
     };
 
