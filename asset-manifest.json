@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/train-test/static/css/main.4352d108.chunk.css",
-    "main.js": "/train-test/static/js/main.b244dafd.chunk.js",
-    "main.js.map": "/train-test/static/js/main.b244dafd.chunk.js.map",
+    "main.js": "/train-test/static/js/main.244c77c8.chunk.js",
+    "main.js.map": "/train-test/static/js/main.244c77c8.chunk.js.map",
     "runtime-main.js": "/train-test/static/js/runtime-main.8349b1ed.js",
     "runtime-main.js.map": "/train-test/static/js/runtime-main.8349b1ed.js.map",
     "static/css/2.cd49b2ce.chunk.css": "/train-test/static/css/2.cd49b2ce.chunk.css",
     "static/js/2.acbd2e56.chunk.js": "/train-test/static/js/2.acbd2e56.chunk.js",
     "static/js/2.acbd2e56.chunk.js.map": "/train-test/static/js/2.acbd2e56.chunk.js.map",
     "index.html": "/train-test/index.html",
-    "precache-manifest.483e693ad521f8ca35fad237b80407c0.js": "/train-test/precache-manifest.483e693ad521f8ca35fad237b80407c0.js",
+    "precache-manifest.3b75ae8cedda61253e906781c39c9424.js": "/train-test/precache-manifest.3b75ae8cedda61253e906781c39c9424.js",
     "service-worker.js": "/train-test/service-worker.js",
     "static/css/2.cd49b2ce.chunk.css.map": "/train-test/static/css/2.cd49b2ce.chunk.css.map",
     "static/css/main.4352d108.chunk.css.map": "/train-test/static/css/main.4352d108.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.cd49b2ce.chunk.css",
     "static/js/2.acbd2e56.chunk.js",
     "static/css/main.4352d108.chunk.css",
-    "static/js/main.b244dafd.chunk.js"
+    "static/js/main.244c77c8.chunk.js"
   ]
 }
