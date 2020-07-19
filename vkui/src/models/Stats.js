@@ -3,6 +3,10 @@ export const EVENT_START = 'start';
 export const EVENT_ANSWER = 'answer';
 export const EVENT_RESULT = 'result';
 export const EVENT_RETRY = 'retry';
+export const EVENT_POST_SHARE_CLICK = 'post_share_click';
+export const EVENT_STORY_SHARE_CLICK = 'story_share_click';
+export const EVENT_POST_SHARE = 'post_share';
+export const EVENT_STORY_SHARE = 'story_share';
 
 const STATS_URL = 'https://train.blweb.ru/stats';
 

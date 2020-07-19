@@ -10,7 +10,11 @@ class Stats {
         'start',
         'answer',
         'result',
-        'retry'
+        'retry',
+        'post_share_click',
+        'story_share_click',
+        'post_share',
+        'story_share',
     ];
 
     /** @var Base */

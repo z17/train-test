@@ -2,7 +2,14 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {Panel, Button, Cell, Div, Group, PanelHeader, Separator} from '@vkontakte/vkui';
 import {getResult} from "../../models/Test";
-import {EVENT_RETRY, stats} from "../../models/Stats";
+import {
+    EVENT_POST_SHARE,
+    EVENT_POST_SHARE_CLICK,
+    EVENT_RETRY,
+    EVENT_STORY_SHARE,
+    EVENT_STORY_SHARE_CLICK,
+    stats
+} from "../../models/Stats";
 import bridge from '@vkontakte/vk-bridge';
 import './Result.css'
 import Icon24StoryOutline from '@vkontakte/icons/dist/24/story_outline';
@@ -11,17 +18,28 @@ import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 const Index = ({id, go}) => {
     const [result] = useState(getResult());
 
+    bridge.subscribe((event) => {
+        if (event.detail.type === "VKWebAppShowWallPostBoxResult") {
+            stats(EVENT_POST_SHARE);
+        }
+        if (event.detail.type === "VKWebAppShowStoryBoxResult") {
+            stats(EVENT_STORY_SHARE);
+        }
+    });
+
     const onRetryClick = () => {
         stats(EVENT_RETRY);
         go('home')
     };
 
     const onPostShareClick = () => {
+        stats(EVENT_POST_SHARE_CLICK);
         let text = result.text + "\nУзнать какой ты вагон: https://vk.com/app7469782";
         bridge.send("VKWebAppShowWallPostBox", {"message": text, "attachments": result.attachment});
     };
 
     const onStoryShareClick = () => {
+        stats(EVENT_STORY_SHARE_CLICK);
         bridge.send("VKWebAppShowStoryBox", {
             "background_type": "image",
             "url": result.image,
@@ -68,6 +86,7 @@ const Index = ({id, go}) => {
             ]
         });
     };
+
     return <Panel id={id}>
         <PanelHeader>Результат</PanelHeader>
         <Group>
