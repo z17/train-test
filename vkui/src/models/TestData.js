@@ -655,8 +655,8 @@ export const resultVariants = {
     [RESULT_7]: {
         title: "Платформа для техники",
         text: "На вас всегда можно положиться, вы - опора для друзей и близких. Вас не пугают трудности и сложные задачи, вы привыкли отдавать всего себя и можете вовремя подать руку другому. Похоже что вы настоящая платформа для техники.",
-        image: "https://sun9-14.userapi.com/NW_GOYSRJqLtuTD2sssBA_aIhzBRESLXLyahDw/BMbybEb5VzA.jpg",
-        attachment: "photo-195969535_457239023"
+        image: "https://sun9-6.userapi.com/X3TaDUToZstmWNyjCBF5oP1ILpq62VHKJIzkTw/Yrqw_30KcvE.jpg",
+        attachment: "photo-195969535_457239027"
     },
     [RESULT_8]: {
         title: "Вагон-ресторан",
